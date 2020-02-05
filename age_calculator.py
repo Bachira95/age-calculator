@@ -15,11 +15,14 @@ def check_birthdate(year, month, day):
 
 def calculate_age(year, month, day):
 	birthdate=datetime.date(year, month, day)
-	thisYear = datetime.date.today().year
+	#thisYear = datetime.date.today().year
+	today = datetime.date.today()
+
 	#birthdayYear= birthdate.date.year
 
 
-	age=(thisYear-birthdate.year)
+	#age=(thisYear-birthdate.year)
+	age = int((today-birthdate).days/365)
 	print ("You are %d age old" %(age,))
     # write code here
 
